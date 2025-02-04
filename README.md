@@ -7,3 +7,17 @@ I am following the a course by Striver called [Strivers A2Z DSA Course/Sheet](ht
 I hope to make a commit everyday as I learn one new thing everyday. I will be taking notes in Markdown and also include C++ files where necessary.
 
 I hope that this *public contract* will keep me accountable and help me stay consistent in my learning.
+
+
+
+
+<details>
+<summary>Problems I've solved</summary>
+
+
+1. https://www.hackerrank.com/challenges/solve-me-first/problem
+2. https://www.hackerrank.com/challenges/cpp-hello-world/problem?isFullScreen=true
+3. https://www.hackerrank.com/challenges/c-tutorial-basic-data-types/problem?isFullScreen=true
+4. 
+
+</details>
