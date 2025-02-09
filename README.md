@@ -15,9 +15,10 @@ I hope that this *public contract* will keep me accountable and help me stay con
 <summary>Problems I've solved</summary>
 
 
-1. https://www.hackerrank.com/challenges/solve-me-first/problem
-2. https://www.hackerrank.com/challenges/cpp-hello-world/problem?isFullScreen=true
-3. https://www.hackerrank.com/challenges/c-tutorial-basic-data-types/problem?isFullScreen=true
-4. 
+1. https://www.hackerrank.com/challenges/solve-me-first/problem (5 Feb 2025)
+2. https://www.hackerrank.com/challenges/cpp-hello-world/problem?isFullScreen=true (5 Feb 2025)
+3. https://www.hackerrank.com/challenges/c-tutorial-basic-data-types/problem?isFullScreen=true (5 Feb 2025)
+4. https://github.com/annimukherjee/dsa.git (9 Feb 2025)
+5. 
 
 </details>
