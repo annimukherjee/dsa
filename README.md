@@ -19,6 +19,7 @@ I hope that this *public contract* will keep me accountable and help me stay con
 2. https://www.hackerrank.com/challenges/cpp-hello-world/problem?isFullScreen=true (5 Feb 2025)
 3. https://www.hackerrank.com/challenges/c-tutorial-basic-data-types/problem?isFullScreen=true (5 Feb 2025)
 4. https://www.hackerrank.com/challenges/cpp-input-and-output/problem?isFullScreen=true (9 Feb 2025)
-5. 
+5. https://www.hackerrank.com/challenges/c-tutorial-for-loop/problem?isFullScreen=true (12 Feb 2025)
+6. 
 
 </details>
