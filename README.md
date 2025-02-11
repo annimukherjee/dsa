@@ -23,5 +23,6 @@ I hope that this *public contract* will keep me accountable and help me stay con
 6. https://www.hackerrank.com/challenges/c-tutorial-conditional-if-else/problem?isFullScreen=true (12 Feb 2025)
 7. https://www.hackerrank.com/challenges/c-tutorial-functions/problem?isFullScreen=true (12 Feb 2025)
 8. https://www.hackerrank.com/challenges/c-tutorial-pointer/problem?isFullScreen=true
+9. https://www.hackerrank.com/challenges/arrays-introduction/problem?isFullScreen=true
 
 </details>
