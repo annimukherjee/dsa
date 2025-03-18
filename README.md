@@ -30,6 +30,6 @@ Hackerrank:
 Leetcode:
 1. https://leetcode.com/problems/concatenation-of-array/description/
 2. https://leetcode.com/problems/return-length-of-arguments-passed/description/
-3. 1051. Height Checker: https://leetcode.com/problems/height-checker/description/?envType=problem-list-v2&envId=array
+3. Height Checker: https://leetcode.com/problems/height-checker/description/?envType=problem-list-v2&envId=array
 
 </details>
