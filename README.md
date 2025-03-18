@@ -15,6 +15,7 @@ I hope that this *public contract* will keep me accountable and help me stay con
 <summary>Problems I've solved</summary>
 
 
+Hackerrank:
 1. https://www.hackerrank.com/challenges/solve-me-first/problem (5 Feb 2025)
 2. https://www.hackerrank.com/challenges/cpp-hello-world/problem?isFullScreen=true (5 Feb 2025)
 3. https://www.hackerrank.com/challenges/c-tutorial-basic-data-types/problem?isFullScreen=true (5 Feb 2025)
@@ -24,5 +25,9 @@ I hope that this *public contract* will keep me accountable and help me stay con
 7. https://www.hackerrank.com/challenges/c-tutorial-functions/problem?isFullScreen=true (12 Feb 2025)
 8. https://www.hackerrank.com/challenges/c-tutorial-pointer/problem?isFullScreen=true
 9. https://www.hackerrank.com/challenges/arrays-introduction/problem?isFullScreen=true
+
+
+Leetcode:
+1. https://leetcode.com/problems/concatenation-of-array/description/
 
 </details>
