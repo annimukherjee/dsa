@@ -11,7 +11,6 @@ I hope that this *public contract* will keep me accountable and help me stay con
 
 
 
-<details>
 <summary>Problems I've solved</summary>
 
 
@@ -32,5 +31,10 @@ Leetcode:
 2. https://leetcode.com/problems/return-length-of-arguments-passed/description/ (18 Mar 2025)
 3. Height Checker: https://leetcode.com/problems/height-checker/description/?envType=problem-list-v2&envId=array (18 Mar 2025)
 4. https://leetcode.com/problems/display-the-first-three-rows/description/ (18 Mar 2025)
+5. https://leetcode.com/problems/modify-columns/description/ (20th Mar 2025)
+6. https://leetcode.com/problems/rename-columns/description/ (20th Mar 2025)
+7. https://leetcode.com/problems/change-data-type/description/ (20th Mar 2025)
+8. 
 
-</details>
+
+
