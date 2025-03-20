@@ -34,7 +34,6 @@ Leetcode:
 5. https://leetcode.com/problems/modify-columns/description/ (20th Mar 2025)
 6. https://leetcode.com/problems/rename-columns/description/ (20th Mar 2025)
 7. https://leetcode.com/problems/change-data-type/description/ (20th Mar 2025)
-8. 
 
 
 
