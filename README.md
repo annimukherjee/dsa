@@ -37,3 +37,12 @@ Leetcode:
 
 
 
+
+## Things I've Learnt:
+
+1. In Pandas, to modify the columns `.astype('int')` or something is used in general.
+2. In Pandas, to rename a column, you have to pass a dictionaly of the {'old_col_name': 'new_col_name'} to the `.rename()` function.
+3. 
+
+
+
