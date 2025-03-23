@@ -24,6 +24,8 @@ Hackerrank:
 7. https://www.hackerrank.com/challenges/c-tutorial-functions/problem?isFullScreen=true (12 Feb 2025)
 8. https://www.hackerrank.com/challenges/c-tutorial-pointer/problem?isFullScreen=true
 9. https://www.hackerrank.com/challenges/arrays-introduction/problem?isFullScreen=true
+10. https://www.hackerrank.com/challenges/python-division/problem?isFullScreen=true [Python] (23 Mar 2025)
+11. https://www.hackerrank.com/challenges/python-loops/problem?isFullScreen=true [Python] (23 Mar 2025)
 
 
 Leetcode:
