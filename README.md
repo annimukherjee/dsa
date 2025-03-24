@@ -26,6 +26,12 @@ Hackerrank:
 9. https://www.hackerrank.com/challenges/arrays-introduction/problem?isFullScreen=true
 10. https://www.hackerrank.com/challenges/python-division/problem?isFullScreen=true [Python] (23 Mar 2025)
 11. https://www.hackerrank.com/challenges/python-loops/problem?isFullScreen=true [Python] (23 Mar 2025)
+12. https://www.hackerrank.com/challenges/python-arithmetic-operators/problem?isFullScreen=true [Python] (24 Mar 2025)
+13. https://www.hackerrank.com/challenges/python-print/problem?isFullScreen=true [Python] (24 Mar 2025)
+14. https://www.hackerrank.com/challenges/python-integers-come-in-all-sizes/problem?isFullScreen=true [Python] (24 Mar 2025)
+15. https://www.hackerrank.com/challenges/python-power-mod-power/problem?isFullScreen=true [Python] (24 March 2025)
+16. https://www.hackerrank.com/challenges/python-power-mod-power/problem?isFullScreen=true [Python] (24 March 2025)
+17. 
 
 
 Leetcode:
