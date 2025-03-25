@@ -31,7 +31,7 @@ Hackerrank:
 14. https://www.hackerrank.com/challenges/python-integers-come-in-all-sizes/problem?isFullScreen=true [Python] (24 Mar 2025)
 15. https://www.hackerrank.com/challenges/python-power-mod-power/problem?isFullScreen=true [Python] (24 March 2025)
 16. https://www.hackerrank.com/challenges/python-power-mod-power/problem?isFullScreen=true [Python] (24 March 2025)
-17. 
+17. https://www.hackerrank.com/challenges/np-sum-and-prod/problem?isFullScreen=true [Python, Numpy] (25 March 2025)
 
 
 Leetcode:
