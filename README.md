@@ -56,7 +56,7 @@ Leetcode:
 1. In Pandas, to modify the columns `.astype('int')` or something is used in general.
 2. In Pandas, to rename a column, you have to pass a dictionary of the `{'old_col_name': 'new_col_name'}` to the `.rename()` function.
 3. In SQL, to use the WHERE clause these two links might be helpful to refresh your memory of the Syntax ([here](https://five.co/blog/sql-multiple-where-clauses/#:~:text=%27New%20York%27%3B-,Combining%20Multiple%20WHERE%20Clauses,Using%20OR%20operator), [here](https://www.w3schools.com/sql/sql_where.asp))
-4. If you want to get the unique values from a column in SQL use the `DISTINCT` keyword. For example, `SELECT DISTINCT column_name FROM table_name;`
+4. If you want to get the unique values from a column in SQL use the `DISTINCT` keyword. For example, `SELECT DISTINCT column_name FROM table_name;` ([here](https://www.w3schools.com/sql/sql_distinct.asp))
 5. 
    
 
