@@ -43,7 +43,7 @@ Leetcode:
 6. https://leetcode.com/problems/rename-columns/description/ (20th Mar 2025)
 7. https://leetcode.com/problems/change-data-type/description/ (20th Mar 2025)
 8. https://leetcode.com/problems/select-data/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata (22nd Mar 2025)
-9. 
+9. https://leetcode.com/problems/recyclable-and-low-fat-products/description/?envType=study-plan-v2&envId=top-sql-50 [SQL] (27th Mar 2025)
 
 
 
@@ -52,7 +52,8 @@ Leetcode:
 
 1. In Pandas, to modify the columns `.astype('int')` or something is used in general.
 2. In Pandas, to rename a column, you have to pass a dictionary of the `{'old_col_name': 'new_col_name'}` to the `.rename()` function.
-3. 
+3. In SQL, to use the WHERE clause these two links might be helpful to refresh your memory of the Syntax ([here](https://five.co/blog/sql-multiple-where-clauses/#:~:text=%27New%20York%27%3B-,Combining%20Multiple%20WHERE%20Clauses,Using%20OR%20operator), [here](https://www.w3schools.com/sql/sql_where.asp))
+   
 
 
 
