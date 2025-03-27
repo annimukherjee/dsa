@@ -44,6 +44,7 @@ Leetcode:
 7. https://leetcode.com/problems/change-data-type/description/ (20th Mar 2025)
 8. https://leetcode.com/problems/select-data/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata (22nd Mar 2025)
 9. https://leetcode.com/problems/recyclable-and-low-fat-products/description/?envType=study-plan-v2&envId=top-sql-50 [SQL] (27th Mar 2025)
+10. https://leetcode.com/problems/find-customer-referee/description/?envType=study-plan-v2&envId=top-sql-50 [SQL] (27th Mar 2025)
 
 
 
