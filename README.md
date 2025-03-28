@@ -41,13 +41,14 @@ Leetcode:
 3. Height Checker: https://leetcode.com/problems/height-checker/description/?envType=problem-list-v2&envId=array (18 Mar 2025)
 4. https://leetcode.com/problems/display-the-first-three-rows/description/ (18 Mar 2025)
 5. https://leetcode.com/problems/modify-columns/description/ (20th Mar 2025)
-6. https://leetcode.com/problems/rename-columns/description/ (20th Mar 2025)
-7. https://leetcode.com/problems/change-data-type/description/ (20th Mar 2025)
-8. https://leetcode.com/problems/select-data/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata (22nd Mar 2025)
+6. https://leetcode.com/problems/rename-columns/description/ [Pandas] (20th Mar 2025)
+7. https://leetcode.com/problems/change-data-type/description/ [Pandas] (20th Mar 2025)
+8. https://leetcode.com/problems/select-data/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata [Pandas] (22nd Mar 2025)
 9. https://leetcode.com/problems/recyclable-and-low-fat-products/description/?envType=study-plan-v2&envId=top-sql-50 [SQL] (27th Mar 2025)
 10. https://leetcode.com/problems/find-customer-referee/description/?envType=study-plan-v2&envId=top-sql-50 [SQL] (27th Mar 2025)
 11. https://leetcode.com/problems/big-countries/?envType=study-plan-v2&envId=top-sql-50 [SQL] (27th Mar 2025)
 12. https://leetcode.com/problems/article-views-i/description/?envType=study-plan-v2&envId=top-sql-50 [SQL] (27th Mar 2025)
+13. https://leetcode.com/problems/create-a-dataframe-from-list/description/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata [Pandas] (29th Mar 2025)
 
 
 
