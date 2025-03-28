@@ -32,6 +32,7 @@ Hackerrank:
 15. https://www.hackerrank.com/challenges/python-power-mod-power/problem?isFullScreen=true [Python] (24 March 2025)
 16. https://www.hackerrank.com/challenges/python-power-mod-power/problem?isFullScreen=true [Python] (24 March 2025)
 17. https://www.hackerrank.com/challenges/np-sum-and-prod/problem?isFullScreen=true [Python, Numpy] (25 March 2025)
+18. https://www.hackerrank.com/challenges/bash-tutorials---the-world-of-numbers/problem?isFullScreen=true [Bash] (28th March 2025)
 
 
 Leetcode:
@@ -57,7 +58,8 @@ Leetcode:
 2. In Pandas, to rename a column, you have to pass a dictionary of the `{'old_col_name': 'new_col_name'}` to the `.rename()` function.
 3. In SQL, to use the WHERE clause these two links might be helpful to refresh your memory of the Syntax ([here](https://five.co/blog/sql-multiple-where-clauses/#:~:text=%27New%20York%27%3B-,Combining%20Multiple%20WHERE%20Clauses,Using%20OR%20operator), [here](https://www.w3schools.com/sql/sql_where.asp))
 4. If you want to get the unique values from a column in SQL use the `DISTINCT` keyword. For example, `SELECT DISTINCT column_name FROM table_name;` ([here](https://www.w3schools.com/sql/sql_distinct.asp))
-5. 
+5. To read numbers in Bash you use `read` command. For example, `read a` will read a number and store it in the variable `a`.
+6. To do arithmetic expressions in Bash using the values of variables use the `$(())` sign. For example, `echo $((a+b))` will print the sum of `a` and `b`.
    
 
 
