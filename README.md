@@ -50,7 +50,7 @@ Leetcode:
 12. https://leetcode.com/problems/article-views-i/description/?envType=study-plan-v2&envId=top-sql-50 [SQL] (27th Mar 2025)
 13. https://leetcode.com/problems/create-a-dataframe-from-list/description/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata [Pandas] (29th Mar 2025)
 14. https://leetcode.com/problems/get-the-size-of-a-dataframe/description/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata [Pandas] (29th Mar 2025)
-15. 
+15. https://leetcode.com/problems/create-a-new-column/description/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata [Pandas] (29th March 2025)
 
 
 
