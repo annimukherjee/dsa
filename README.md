@@ -64,7 +64,7 @@ Leetcode:
 4. If you want to get the unique values from a column in SQL use the `DISTINCT` keyword. For example, `SELECT DISTINCT column_name FROM table_name;` ([here](https://www.w3schools.com/sql/sql_distinct.asp))
 5. To read numbers in Bash you use `read` command. For example, `read a` will read a number and store it in the variable `a`.
 6. To do arithmetic expressions in Bash using the values of variables use the `$(())` sign. For example, `echo $((a+b))` will print the sum of `a` and `b`.
-7. In Pandas if you have a column say `email` in a DataFrame, say, `customers` and you want to get the drop the rows where a duplicate value occurs then use `customers.drop_duplicates(subset=['email'])`. This will drop the rows where the `email` column has duplicate values.
+7. In Pandas if you have a column say `email` in a DataFrame, say, `customers` and you want to get the drop the rows where a duplicate value occurs then use `customers.drop_duplicates(subset=['email'])`. This will drop the rows where the `email` column has duplicate values. ([here](https://medium.com/@robertsevan/leetcode-problem-2882-drop-duplicate-rows-leetcode-introduction-to-pandas-70e8a5298e40))
    
 
 
