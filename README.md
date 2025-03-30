@@ -52,6 +52,8 @@ Leetcode:
 14. https://leetcode.com/problems/get-the-size-of-a-dataframe/description/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata [Pandas] (29th Mar 2025)
 15. https://leetcode.com/problems/create-a-new-column/description/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata [Pandas] (29th March 2025)
 16. https://leetcode.com/problems/drop-duplicate-rows/description/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata [Pandas] (29th March 2025)
+17. https://leetcode.com/problems/drop-missing-data/description/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata [Pandas] (30th March) (nice [editorial](https://leetcode.com/problems/drop-missing-data/editorial/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata))
+18. 
 
 
 
