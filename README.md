@@ -8,7 +8,9 @@ I hope to make a commit everyday as I learn one new thing everyday. I will be ta
 
 I hope that this *public contract* will keep me accountable and help me stay consistent in my learning.
 
-
+[![LeetCode](https://img.shields.io/badge/LeetCode-orange?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/annimukh/)
+[![HackerRank](https://img.shields.io/badge/HackerRank-2EC866?style=for-the-badge&logo=hackerrank&logoColor=white)](https://www.hackerrank.com/profile/mukh_aniruddha)
+[![Codolio](https://img.shields.io/badge/Codolio-blueviolet?style=for-the-badge)](https://codolio.com/profile/annimukh)
 
 
 <summary>Problems I've solved</summary>
