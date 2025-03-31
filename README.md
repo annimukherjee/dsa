@@ -56,6 +56,7 @@ Leetcode:
 16. https://leetcode.com/problems/drop-duplicate-rows/description/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata [Pandas] (29th March 2025)
 17. https://leetcode.com/problems/drop-missing-data/description/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata [Pandas] (30th March) (nice [editorial](https://leetcode.com/problems/drop-missing-data/editorial/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata))
 18. https://leetcode.com/problems/check-if-the-number-is-fascinating/description/ [Hash Table, Math] (30th March 2025)
+19. https://leetcode.com/problems/number-of-good-pairs/ [DSA] (31st March 2025)
 
 
 
