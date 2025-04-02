@@ -35,6 +35,7 @@ Hackerrank:
 16. https://www.hackerrank.com/challenges/python-power-mod-power/problem?isFullScreen=true [Python] (24 March 2025)
 17. https://www.hackerrank.com/challenges/np-sum-and-prod/problem?isFullScreen=true [Python, Numpy] (25 March 2025)
 18. https://www.hackerrank.com/challenges/bash-tutorials---the-world-of-numbers/problem?isFullScreen=true [Bash] (28th March 2025)
+19. https://www.hackerrank.com/challenges/swap-case/problem?isFullScreen=true [Python, sWAP cASE] (2nd April 2025)
 
 
 Leetcode:
