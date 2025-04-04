@@ -36,6 +36,7 @@ Hackerrank:
 17. https://www.hackerrank.com/challenges/np-sum-and-prod/problem?isFullScreen=true [Python, Numpy] (25 March 2025)
 18. https://www.hackerrank.com/challenges/bash-tutorials---the-world-of-numbers/problem?isFullScreen=true [Bash] (28th March 2025)
 19. https://www.hackerrank.com/challenges/swap-case/problem?isFullScreen=true [Python, sWAP cASE] (2nd April 2025)
+20. https://www.hackerrank.com/challenges/whats-your-name/problem?isFullScreen=true [Python, Basic Printing] (4th April 2025)
 
 
 Leetcode:
