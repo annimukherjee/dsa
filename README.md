@@ -60,6 +60,7 @@ Leetcode:
 18. https://leetcode.com/problems/check-if-the-number-is-fascinating/description/ [Hash Table, Math] (30th March 2025)
 19. https://leetcode.com/problems/number-of-good-pairs/ [DSA] (31st March 2025)
 20. https://leetcode.com/problems/add-two-integers/description/ [Add 2 Numbers xD] (7 Apr 2025)
+21. https://leetcode.com/problems/valid-palindrome/description/ [Palindrome] (7 Apr 2025)
 
 
 Thinking of using this Roadmap: https://www.linkedin.com/posts/mohammadfraz_dsa-will-be-hard-for-you-until-your-basics-activity-7314269799121833984-Qiv2?utm_medium=ios_app&rcm=ACoAAD36RO8BJuUVKHrrxCH5luy7TsWec1SoVKo&utm_source=social_share_send&utm_campaign=copy_link
