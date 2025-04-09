@@ -62,6 +62,7 @@ Leetcode:
 20. https://leetcode.com/problems/add-two-integers/description/ [Add 2 Numbers xD] (7 Apr 2025)
 21. https://leetcode.com/problems/valid-palindrome/description/ [Palindrome] (7 Apr 2025)
 22. https://leetcode.com/problems/intersection-of-two-arrays/description/ [Intersection of Two Arrays] (8 Apr 2025)
+23. https://leetcode.com/problems/plus-one/ [Plus One] (9 Apr 2025)
 
 
 Thinking of using this Roadmap: https://www.linkedin.com/posts/mohammadfraz_dsa-will-be-hard-for-you-until-your-basics-activity-7314269799121833984-Qiv2?utm_medium=ios_app&rcm=ACoAAD36RO8BJuUVKHrrxCH5luy7TsWec1SoVKo&utm_source=social_share_send&utm_campaign=copy_link
