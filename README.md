@@ -38,6 +38,7 @@ Hackerrank:
 19. https://www.hackerrank.com/challenges/swap-case/problem?isFullScreen=true [Python, sWAP cASE] (2nd April 2025)
 20. https://www.hackerrank.com/challenges/whats-your-name/problem?isFullScreen=true [Python, Basic Printing] (4th April 2025)
 21. https://www.hackerrank.com/challenges/simple-array-sum/problem?isFullScreen=true [Array Sum] (9th Apr 2025)
+22. https://www.hackerrank.com/challenges/py-introduction-to-sets/problem?isFullScreen=true [Python, Sets] (10th Apr 2025)
 
 
 Leetcode:
