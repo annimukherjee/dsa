@@ -39,6 +39,7 @@ Hackerrank:
 20. https://www.hackerrank.com/challenges/whats-your-name/problem?isFullScreen=true [Python, Basic Printing] (4th April 2025)
 21. https://www.hackerrank.com/challenges/simple-array-sum/problem?isFullScreen=true [Array Sum] (9th Apr 2025)
 22. https://www.hackerrank.com/challenges/py-introduction-to-sets/problem?isFullScreen=true [Python, Sets] (10th Apr 2025)
+23. https://www.hackerrank.com/challenges/conditional-statements-in-c/problem?isFullScreen=true [If-Else in C] (12th Apr 2025)
 
 
 Leetcode:
