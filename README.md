@@ -40,6 +40,8 @@ Hackerrank:
 21. https://www.hackerrank.com/challenges/simple-array-sum/problem?isFullScreen=true [Array Sum] (9th Apr 2025)
 22. https://www.hackerrank.com/challenges/py-introduction-to-sets/problem?isFullScreen=true [Python, Sets] (10th Apr 2025)
 23. https://www.hackerrank.com/challenges/conditional-statements-in-c/problem?isFullScreen=true [If-Else in C] (12th Apr 2025)
+24. https://www.hackerrank.com/challenges/find-a-string/problem?isFullScreen=true [Sliding Window Substring Matching] (13th Apr 2025)
+    1.  Learnt how to slide a window over a string to find a substring. Created https://claude.site/artifacts/d26622f9-69ef-4dfa-90da-303be1cea047 to visualize it.
 
 
 Leetcode:
