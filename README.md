@@ -43,7 +43,7 @@ Hackerrank:
 24. https://www.hackerrank.com/challenges/find-a-string/problem?isFullScreen=true [Sliding Window Substring Matching] (13th Apr 2025)
     1.  Learnt how to slide a window over a string to find a substring. Created https://claude.site/artifacts/d26622f9-69ef-4dfa-90da-303be1cea047 to visualize it.
     2.  Trying to setup `commitizen`
-25. https://www.hackerrank.com/challenges/py-set-add/problem?isFullScreen=true
+25. https://www.hackerrank.com/challenges/py-set-add/problem?isFullScreen=true (15 Apr 2025)
     1.  Learnt `s.add()` method in set for Python.
 
 
@@ -73,6 +73,8 @@ Leetcode:
 23. https://leetcode.com/problems/plus-one/ [Plus One] (9 Apr 2025)
 24. https://leetcode.com/problems/shuffle-the-array/description/ [Shuffle an Array] (9 Apr 2025)
 25. https://leetcode.com/problems/fill-missing-data/description/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata [Pandas] (11 Apr 2025)
+26. https://leetcode.com/problems/running-sum-of-1d-array/description/ [Running Sum of 1D Array] (15 Apr 2025)
+    1. Do a running sum of the array.
 
 
 Thinking of using this Roadmap: https://www.linkedin.com/posts/mohammadfraz_dsa-will-be-hard-for-you-until-your-basics-activity-7314269799121833984-Qiv2?utm_medium=ios_app&rcm=ACoAAD36RO8BJuUVKHrrxCH5luy7TsWec1SoVKo&utm_source=social_share_send&utm_campaign=copy_link
