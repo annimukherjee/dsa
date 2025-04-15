@@ -43,6 +43,8 @@ Hackerrank:
 24. https://www.hackerrank.com/challenges/find-a-string/problem?isFullScreen=true [Sliding Window Substring Matching] (13th Apr 2025)
     1.  Learnt how to slide a window over a string to find a substring. Created https://claude.site/artifacts/d26622f9-69ef-4dfa-90da-303be1cea047 to visualize it.
     2.  Trying to setup `commitizen`
+25. https://www.hackerrank.com/challenges/py-set-add/problem?isFullScreen=true
+    1.  Learnt `s.add()` method in set for Python.
 
 
 Leetcode:
