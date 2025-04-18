@@ -78,7 +78,7 @@ I hope that this *public contract* will keep me accountable and help me stay con
  27. https://leetcode.com/problems/sqrtx/ (15 Apr 2025)
      1.  Did this in O(n) time. Problem is to find the square root of a number without using built in functions. Can do this with binary search and thus reduce the problem into `O(log(n))`
  28. https://leetcode.com/problems/reshape-data-concatenate/description/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata (16 April)
-     1.  Essentially teaches you how to use the `pd.concat()` function. `concat()` allows you to glue dataframes together. If `axis=0` it does a row wise concatenation (increase the height of the dataframe) and if `axis=1` (increase the width of the dataframe) it does a column wise concatenation. Also supports `join` etc. i.e. `inner` and `outer`. [Great short medium article here](https://medium.com/@connor.m.killion/joins-concat-vs-merge-inner-vs-outer-with-pandas-b27d36b63752).
+     1.  Essentially teaches you how to use the `pd.concat()` function. `concat()` allows you to glue dataframes together. If `axis=0` it does a row wise concatenation (increase the height of the dataframe) and if `axis=1`, it does a column wise concatenation (increase the width of the dataframe). Also supports `join` etc. i.e. `inner` and `outer`. [Great short medium article here](https://medium.com/@connor.m.killion/joins-concat-vs-merge-inner-vs-outer-with-pandas-b27d36b63752).
  29. https://leetcode.com/problems/method-chaining/description/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata
      1.  Method Chaining. Filter, sort the df by weight using `sort_values(by='col_name')` and then get the necessary column.
 
@@ -98,7 +98,6 @@ I hope that this *public contract* will keep me accountable and help me stay con
 
 
 
-Thinking of using this Roadmap: https://www.linkedin.com/posts/mohammadfraz_dsa-will-be-hard-for-you-until-your-basics-activity-7314269799121833984-Qiv2?utm_medium=ios_app&rcm=ACoAAD36RO8BJuUVKHrrxCH5luy7TsWec1SoVKo&utm_source=social_share_send&utm_campaign=copy_link
 
 ## Things I've Learnt:
 
@@ -108,7 +107,8 @@ Thinking of using this Roadmap: https://www.linkedin.com/posts/mohammadfraz_dsa-
 4. If you want to get the unique values from a column in SQL use the `DISTINCT` keyword. For example, `SELECT DISTINCT column_name FROM table_name;` ([here](https://www.w3schools.com/sql/sql_distinct.asp))
 5. To read numbers in Bash you use `read` command. For example, `read a` will read a number and store it in the variable `a`.
 6. To do arithmetic expressions in Bash using the values of variables use the `$(())` sign. For example, `echo $((a+b))` will print the sum of `a` and `b`.
-7. In Pandas if you have a column say `email` in a DataFrame, say, `customers` and you want to get the drop the rows where a duplicate value occurs then use `customers.drop_duplicates(subset=['email'])`. This will drop the rows where the `email` column has duplicate values. ([here](https://medium.com/@robertsevan/leetcode-problem-2882-drop-duplicate-rows-leetcode-introduction-to-pandas-70e8a5298e40))
+7. In Pandas if you have a column say `email` in a DataFrame, say, `customers` and you want to get the drop the rows where a duplicate value occurs then use `customers.drop_duplicates(subset=['email'])`. This will drop the rows where the `email` column has duplicate values. ([Nice article](https://medium.com/@robertsevan/leetcode-problem-2882-drop-duplicate-rows-leetcode-introduction-to-pandas-70e8a5298e40))
+8. 
    
 
 
