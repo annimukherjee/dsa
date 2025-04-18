@@ -16,7 +16,7 @@ I hope that this *public contract* will keep me accountable and help me stay con
 <summary>Problems I've solved</summary>
 
 
-Hackerrank:
+### HackerRank:
 1. https://www.hackerrank.com/challenges/solve-me-first/problem (5 Feb 2025)
 2. https://www.hackerrank.com/challenges/cpp-hello-world/problem?isFullScreen=true (5 Feb 2025)
 3. https://www.hackerrank.com/challenges/c-tutorial-basic-data-types/problem?isFullScreen=true (5 Feb 2025)
@@ -47,7 +47,7 @@ Hackerrank:
     1.  Learnt `s.add()` method in set for Python.
 
 
-Leetcode:
+### Leetcode:
 1. https://leetcode.com/problems/concatenation-of-array/description/ (18 Mar 2025)
 2. https://leetcode.com/problems/return-length-of-arguments-passed/description/ (18 Mar 2025)
 3. Height Checker: https://leetcode.com/problems/height-checker/description/?envType=problem-list-v2&envId=array (18 Mar 2025)
@@ -74,7 +74,28 @@ Leetcode:
 24. https://leetcode.com/problems/shuffle-the-array/description/ [Shuffle an Array] (9 Apr 2025)
 25. https://leetcode.com/problems/fill-missing-data/description/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata [Pandas] (11 Apr 2025)
 26. https://leetcode.com/problems/running-sum-of-1d-array/description/ [Running Sum of 1D Array] (15 Apr 2025)
-    1. Do a running sum of the array.
+    1. Did a running sum of the array.
+ 27. https://leetcode.com/problems/sqrtx/ (15 Apr 2025)
+     1.  Did this in O(n) time. Problem is to find the square root of a number without using built in functions. Can do this with binary search and thus reduce the problem into `O(log(n))`
+ 28. https://leetcode.com/problems/reshape-data-concatenate/description/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata (16 April)
+     1.  Essentially teaches you how to use the `pd.concat()` function. `concat()` allows you to glue dataframes together. If `axis=0` it does a row wise concatenation (increase the height of the dataframe) and if `axis=1` (increase the width of the dataframe) it does a column wise concatenation. Also supports `join` etc. i.e. `inner` and `outer`. [Great short medium article here](https://medium.com/@connor.m.killion/joins-concat-vs-merge-inner-vs-outer-with-pandas-b27d36b63752).
+ 29. https://leetcode.com/problems/method-chaining/description/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata
+     1.  Method Chaining. Filter, sort the df by weight using `sort_values(by='col_name')` and then get the necessary column.
+
+
+
+### CodeForces:
+1. https://codeforces.com/problemset/problem/4/A [Watermelon] (15 Apr 2025)
+   1. Essentially check if a number is even and greater than 2 so that it can be split into two even numbers. 
+2. https://codeforces.com/problemset/problem/71/A [Way Too Long Words]
+   1. Essentially get the length of a string and if the length of the string is more than 10 then replace it with 
+3. https://codeforces.com/problemset/problem/231/A [Team]
+   1. Count the number of 1's in a bit string. Count if it's more than 2.
+4. https://codeforces.com/problemset/problem/282/A [Bit++]
+   1. See if the string '++' is in the string and update a variable accordingly.
+5. 
+
+
 
 
 Thinking of using this Roadmap: https://www.linkedin.com/posts/mohammadfraz_dsa-will-be-hard-for-you-until-your-basics-activity-7314269799121833984-Qiv2?utm_medium=ios_app&rcm=ACoAAD36RO8BJuUVKHrrxCH5luy7TsWec1SoVKo&utm_source=social_share_send&utm_campaign=copy_link
