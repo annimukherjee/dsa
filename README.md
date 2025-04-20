@@ -45,6 +45,8 @@ I hope that this *public contract* will keep me accountable and help me stay con
     2.  Trying to setup `commitizen`
 25. https://www.hackerrank.com/challenges/py-set-add/problem?isFullScreen=true (15 Apr 2025)
     1.  Learnt `s.add()` method in set for Python.
+26. https://www.hackerrank.com/challenges/python-string-split-and-join/problem?isFullScreen=true
+    1.  Learnt about `split()` and `join()`. I knew split which splits a string into a list (`" "` is the default delimiter). However `join()` I didn't know too well. `"-".join(a)` where `a` is a list returns `"a[0]-a[1]-a[2]...a[len(a)-1]"`
 
 
 ### Leetcode:
