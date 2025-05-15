@@ -47,6 +47,9 @@ I hope that this *public contract* will keep me accountable and help me stay con
     1.  Learnt `s.add()` method in set for Python.
 26. https://www.hackerrank.com/challenges/python-string-split-and-join/problem?isFullScreen=true
     1.  Learnt about `split()` and `join()`. I knew split which splits a string into a list (`" "` is the default delimiter). However `join()` I didn't know too well. `"-".join(a)` where `a` is a list returns `"a[0]-a[1]-a[2]...a[len(a)-1]"`
+27. https://www.hackerrank.com/challenges/python-lists/problem?isFullScreen=true [Python Lists]
+    1.  Slew of List functions like `pop`, `append`, `l[::-1]`, `.remove`, `.sort`.
+    2.  `sort` sorts the list in-place.
 
 
 ### Leetcode:
@@ -95,7 +98,7 @@ I hope that this *public contract* will keep me accountable and help me stay con
    1. Count the number of 1's in a bit string. Count if it's more than 2.
 4. https://codeforces.com/problemset/problem/282/A [Bit++]
    1. See if the string '++' is in the string and update a variable accordingly.
-5. 
+
 
 
 
@@ -110,7 +113,7 @@ I hope that this *public contract* will keep me accountable and help me stay con
 5. To read numbers in Bash you use `read` command. For example, `read a` will read a number and store it in the variable `a`.
 6. To do arithmetic expressions in Bash using the values of variables use the `$(())` sign. For example, `echo $((a+b))` will print the sum of `a` and `b`.
 7. In Pandas if you have a column say `email` in a DataFrame, say, `customers` and you want to get the drop the rows where a duplicate value occurs then use `customers.drop_duplicates(subset=['email'])`. This will drop the rows where the `email` column has duplicate values. ([Nice article](https://medium.com/@robertsevan/leetcode-problem-2882-drop-duplicate-rows-leetcode-introduction-to-pandas-70e8a5298e40))
-8. 
+8. `sorted()` in Python returns a list whereas `.sort()` just does the sort inplace on the list. So, `a=sorted(list)` makes sense but `b=l.sort()` will yield `None` for `b`.
    
 
 
