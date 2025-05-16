@@ -50,6 +50,9 @@ I hope that this *public contract* will keep me accountable and help me stay con
 27. https://www.hackerrank.com/challenges/python-lists/problem?isFullScreen=true [Python Lists]
     1.  Slew of List functions like `pop`, `append`, `l[::-1]`, `.remove`, `.sort`.
     2.  `sort` sorts the list in-place.
+28. https://www.hackerrank.com/challenges/compare-the-triplets/problem?isFullScreen=true
+    1.  Use `zip` which iterates over tuples.
+    2.  Basic `if`, `elif` and `else` logic.
 
 
 ### Leetcode:
