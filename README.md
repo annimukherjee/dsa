@@ -89,6 +89,9 @@ I hope that this *public contract* will keep me accountable and help me stay con
      1.  Essentially teaches you how to use the `pd.concat()` function. `concat()` allows you to glue dataframes together. If `axis=0` it does a row wise concatenation (increase the height of the dataframe) and if `axis=1`, it does a column wise concatenation (increase the width of the dataframe). Also supports `join` etc. i.e. `inner` and `outer`. [Great short medium article here](https://medium.com/@connor.m.killion/joins-concat-vs-merge-inner-vs-outer-with-pandas-b27d36b63752).
  29. https://leetcode.com/problems/method-chaining/description/?envType=study-plan-v2&envId=introduction-to-pandas&lang=pythondata
      1.  Method Chaining. Filter, sort the df by weight using `sort_values(by='col_name')` and then get the necessary column.
+ 30. https://leetcode.com/problems/add-digits/description/?envType=problem-list-v2&envId=prshgx6i
+     1.  Take an integer, add all the digits of that integer to get a number. If that number has more than one digit, repeat.
+     2.  I created a modular solution whereby I created a function whose purpose was to input a number and output the sum of the digits of that number. Then I ran a while loop until the num//10 == 0 as that would mean that `num` is a number with one digit.
 
 
 
