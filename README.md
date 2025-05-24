@@ -92,6 +92,11 @@ I hope that this *public contract* will keep me accountable and help me stay con
  30. https://leetcode.com/problems/add-digits/description/?envType=problem-list-v2&envId=prshgx6i
      1.  Take an integer, add all the digits of that integer to get a number. If that number has more than one digit, repeat.
      2.  I created a modular solution whereby I created a function whose purpose was to input a number and output the sum of the digits of that number. Then I ran a while loop until the num//10 == 0 as that would mean that `num` is a number with one digit.
+ 31. https://leetcode.com/problems/score-of-a-string/submissions/1643047539/
+     1.  Given a string, calculate the difference of the ASCII values of adjacent characters
+     2.  Use `ord` to get the ASCII value of a character in Python
+     3.  To get the absolute value of any number, use `abs()` instead of `math.abs()`.
+ 32. 
 
 
 
