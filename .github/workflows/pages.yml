@@ -3,8 +3,11 @@ name: Deploy GitHub Pages
 on:
   push:
     branches: [ main, master ]
-    paths: [ '.github/tracker/**' ]
   workflow_dispatch:
+  workflow_run:
+    workflows: ["DSA Problem Tracker"]
+    types:
+      - completed
 
 # Sets permissions for GitHub Pages deployment
 permissions:
