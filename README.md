@@ -96,7 +96,8 @@ I hope that this *public contract* will keep me accountable and help me stay con
      1.  Given a string, calculate the difference of the ASCII values of adjacent characters
      2.  Use `ord` to get the ASCII value of a character in Python
      3.  To get the absolute value of any number, use `abs()` instead of `math.abs()`.
- 32. 
+ 32. https://leetcode.com/problems/richest-customer-wealth/description/
+     1.  Return the max of the row wise sum of a mxn matrix
 
 
 
