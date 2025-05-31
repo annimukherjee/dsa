@@ -98,6 +98,14 @@ I hope that this *public contract* will keep me accountable and help me stay con
      3.  To get the absolute value of any number, use `abs()` instead of `math.abs()`.
  32. https://leetcode.com/problems/richest-customer-wealth/description/
      1.  Return the max of the row wise sum of a mxn matrix
+ 33. https://leetcode.com/problems/merge-strings-alternately/description/
+     1.  Given two strings `s1 = "abc"` and `s2 = "pqr"`, merge them alternatively i.e. `"apbqcr"`
+        - To solve:
+          - Check which word has the least length
+          - Run a for loop and add the characters till that least length i.e. do `merged_str = merged_str + word1[i] + word2[i]`
+          - Then for the string that's longer (if that's even a case), add all the characters from len(shorter_str) to len(longer_word). Checkout my solution here for better context.
+34. https://leetcode.com/problems/fizz-buzz/description/
+    1.  Classic FizzBuzz. Need I say more?
 
 
 
