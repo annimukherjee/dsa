@@ -106,7 +106,8 @@ I hope that this *public contract* will keep me accountable and help me stay con
           - Then for the string that's longer (if that's even a case), add all the characters from len(shorter_str) to len(longer_word). Checkout my solution here for better context.
 34. https://leetcode.com/problems/fizz-buzz/description/
     1.  Classic FizzBuzz. Need I say more?
-
+35. https://leetcode.com/problems/convert-the-temperature/description/
+    1.  Really basic temperature conversion problem. Kind of shocked how LeetCode has this up on their website.
 
 
 ### CodeForces:
