@@ -111,6 +111,7 @@ I hope that this *public contract* will keep me accountable and help me stay con
 36. https://leetcode.com/problems/first-unique-character-in-a-string/description/
     1.  I iterate over the string. I push each character into a list. If a character is already in the list, I set it to False in a corresponding dictionary.
     2.  Then I iterate over the string again and return the index of the first character that is True in the dictionary.
+    3.  It's a bit slow. I'm sure there's a better way to do this.
 
 
 ### CodeForces:
