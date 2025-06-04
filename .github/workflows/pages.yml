@@ -1,9 +1,8 @@
-name: Deploy GitHub PagesMore actions
+name: Deploy GitHub Pages
 
 on:
   push:
     branches: [ main, master ]
-
   workflow_dispatch:
   workflow_run:
     workflows: ["DSA Problem Tracker"]
@@ -30,14 +29,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-More actions
+        
       - name: Setup Pages
         uses: actions/configure-pages@v4
-
+        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.github/tracker'
-
+          
       - name: Deploy to GitHub Pages
         id: deployment
+        uses: actions/deploy-pages@v4

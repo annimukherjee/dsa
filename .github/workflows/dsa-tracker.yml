@@ -1,4 +1,4 @@
-name: DSA Problem TrackerAdd commentMore actions
+name: DSA Problem Tracker
 
 on:
   push:
