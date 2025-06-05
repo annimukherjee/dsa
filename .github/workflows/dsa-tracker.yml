@@ -52,11 +52,37 @@ jobs:
           node -e "
             const fs = require('fs');
             const data = JSON.parse(fs.readFileSync('.github/tracker/data.json', 'utf8'));
-
+            const newEntry = {
+              date: '$COMMIT_DATE',
+              platform: '$PLATFORM',
+              message: '$COMMIT_MSG',
+              timestamp: new Date().toISOString()
+            };
+            
+            // Check if entry for this date already exists
+            const existingIndex = data.entries.findIndex(entry => entry.date === '$COMMIT_DATE');
+            if (existingIndex >= 0) {
+              data.entries[existingIndex] = newEntry;
+            } else {
+              data.entries.push(newEntry);
+            }
+            
+            // Sort by date
+            data.entries.sort((a, b) => new Date(a.date) - new Date(b.date));
+            
+            fs.writeFileSync('.github/tracker/data.json', JSON.stringify(data, null, 2));
+            console.log('Tracker data updated!');
+          "
+          
+          # Generate enhanced HTML tracker visualization
+          node -e "
+            const fs = require('fs');
+            const data = JSON.parse(fs.readFileSync('.github/tracker/data.json', 'utf8'));
+            
             // Generate last 365 days
             const today = new Date();
             const oneYearAgo = new Date(today.getTime() - 365 * 24 * 60 * 60 * 1000);
-
+            
             // Calculate enhanced statistics
             function calculateStats(entries) {
               const totalProblems = entries.length;
@@ -124,9 +150,9 @@ jobs:
                 monthlyData
               };
             }
-
+            
             const stats = calculateStats(data.entries);
-
+            
             // Generate chart data for last 12 months
             const chartMonths = [];
             const chartValues = [];
@@ -138,15 +164,15 @@ jobs:
               chartMonths.push(monthName);
               chartValues.push(stats.monthlyData[monthKey] || 0);
             }
-
-            let html = `
+            
+            let html = \`
             <!DOCTYPE html>
             <html>
             <head>
                 <title>DSA Problem Solving Tracker</title>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+                <meta charset=\"UTF-8\">
+                <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+                <script src=\"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js\"></script>
                 <style>
                     * { box-sizing: border-box; }
                     
@@ -386,45 +412,45 @@ jobs:
                 </style>
             </head>
             <body>
-                <div class="container">
-                    <div class="header">
+                <div class=\"container\">
+                    <div class=\"header\">
                         <h1>🚀 DSA Problem Solving Tracker</h1>
                         <p>Track your daily data structures and algorithms practice journey</p>
                     </div>
                     
-                    <div class="stats-grid">
-                        <div class="stat-card">
-                            <div class="stat-value">${stats.totalProblems}</div>
-                            <div class="stat-label">Total Problems</div>
+                    <div class=\"stats-grid\">
+                        <div class=\"stat-card\">
+                            <div class=\"stat-value\">\${stats.totalProblems}</div>
+                            <div class=\"stat-label\">Total Problems</div>
                         </div>
-                        <div class="stat-card">
-                            <div class="stat-value">${stats.currentStreak}</div>
-                            <div class="stat-label">Current Streak</div>
+                        <div class=\"stat-card\">
+                            <div class=\"stat-value\">\${stats.currentStreak}</div>
+                            <div class=\"stat-label\">Current Streak</div>
                         </div>
-                        <div class="stat-card">
-                            <div class="stat-value">${stats.longestStreak}</div>
-                            <div class="stat-label">Longest Streak</div>
+                        <div class=\"stat-card\">
+                            <div class=\"stat-value\">\${stats.longestStreak}</div>
+                            <div class=\"stat-label\">Longest Streak</div>
                         </div>
-                        <div class="stat-card">
-                            <div class="stat-value">${stats.last30Days}</div>
-                            <div class="stat-label">Last 30 Days</div>
+                        <div class=\"stat-card\">
+                            <div class=\"stat-value\">\${stats.last30Days}</div>
+                            <div class=\"stat-label\">Last 30 Days</div>
                         </div>
-                        <div class="stat-card">
-                            <div class="stat-value">${stats.last7Days}</div>
-                            <div class="stat-label">This Week</div>
+                        <div class=\"stat-card\">
+                            <div class=\"stat-value\">\${stats.last7Days}</div>
+                            <div class=\"stat-label\">This Week</div>
                         </div>
                     </div>
                     
-                    <div class="tracker-section">
-                        <h3 class="section-title">📅 Daily Activity</h3>
-                        <div class="tracker-grid">`;
-
+                    <div class=\"tracker-section\">
+                        <h3 class=\"section-title\">📅 Daily Activity</h3>
+                        <div class=\"tracker-grid\">\`;
+            
             // Create grid for last 53 weeks (371 days to ensure we cover a full year)
             const weeks = 53;
             const days = weeks * 7;
-
+            
             for (let week = 0; week < weeks; week++) {
-              html += '<div class="tracker-row">';
+              html += '<div class=\"tracker-row\">';
               for (let day = 0; day < 7; day++) {
                 const dayIndex = week * 7 + day;
                 const currentDate = new Date(today.getTime() - (days - dayIndex - 1) * 24 * 60 * 60 * 1000);
@@ -441,69 +467,69 @@ jobs:
                   day: 'numeric' 
                 });
                 
-                html += `<div class="day-cell day-${level}" 
-                              data-date="${dateStr}" 
-                              data-formatted="${formattedDate}"
-                              data-platform="${entry ? entry.platform : ''}"
-                              data-message="${entry ? entry.message.replace(/"/g, '&quot;') : ''}"
-                              data-has-activity="${entry ? 'true' : 'false'}"></div>`;
+                html += \`<div class=\"day-cell day-\${level}\" 
+                              data-date=\"\${dateStr}\" 
+                              data-formatted=\"\${formattedDate}\"
+                              data-platform=\"\${entry ? entry.platform : ''}\"
+                              data-message=\"\${entry ? entry.message.replace(/\"/g, '&quot;') : ''}\"
+                              data-has-activity=\"\${entry ? 'true' : 'false'}\"></div>\`;
               }
               html += '</div>';
             }
-
-            html += `
+            
+            html += \`
                         </div>
                         
-                        <div class="legend">
+                        <div class=\"legend\">
                             <span>Less</span>
-                            <div class="legend-item">
-                                <div class="legend-color day-0"></div>
+                            <div class=\"legend-item\">
+                                <div class=\"legend-color day-0\"></div>
                             </div>
-                            <div class="legend-item">
-                                <div class="legend-color day-1"></div>
+                            <div class=\"legend-item\">
+                                <div class=\"legend-color day-1\"></div>
                             </div>
-                            <div class="legend-item">
-                                <div class="legend-color day-2"></div>
+                            <div class=\"legend-item\">
+                                <div class=\"legend-color day-2\"></div>
                             </div>
-                            <div class="legend-item">
-                                <div class="legend-color day-3"></div>
+                            <div class=\"legend-item\">
+                                <div class=\"legend-color day-3\"></div>
                             </div>
-                            <div class="legend-item">
-                                <div class="legend-color day-4"></div>
+                            <div class=\"legend-item\">
+                                <div class=\"legend-color day-4\"></div>
                             </div>
                             <span>More</span>
                         </div>
                     </div>
                     
-                    <div class="tracker-section">
-                        <h3 class="section-title">📊 Progress Over Time</h3>
-                        <div class="chart-container">
-                            <canvas id="progressChart" width="400" height="200"></canvas>
+                    <div class=\"tracker-section\">
+                        <h3 class=\"section-title\">📊 Progress Over Time</h3>
+                        <div class=\"chart-container\">
+                            <canvas id=\"progressChart\" width=\"400\" height=\"200\"></canvas>
                         </div>
                     </div>
                     
-                    <div class="tracker-section">
-                        <h3 class="section-title">🏆 Platform Statistics</h3>
-                        <div class="platform-stats">`;
-
+                    <div class=\"tracker-section\">
+                        <h3 class=\"section-title\">🏆 Platform Statistics</h3>
+                        <div class=\"platform-stats\">\`;
+            
             Object.entries(stats.platformCounts).forEach(([platform, count]) => {
               const className = platform.toLowerCase();
-              html += `<div class="platform-badge ${className}">${platform}: ${count}</div>`;
+              html += \`<div class=\"platform-badge \${className}\">\${platform}: \${count}</div>\`;
             });
-
-            html += `
+            
+            html += \`
                         </div>
                     </div>
                     
-                    <div class="footer">
-                        <p>Last updated: ${new Date().toLocaleString()}</p>
+                    <div class=\"footer\">
+                        <p>Last updated: \${new Date().toLocaleString()}</p>
                         <p>💚 Keep up the consistency! Every problem solved is progress made.</p>
                     </div>
                 </div>
                 
-                <div class="tooltip" id="tooltip">
-                    <div class="tooltip-date"></div>
-                    <div class="tooltip-content"></div>
+                <div class=\"tooltip\" id=\"tooltip\">
+                    <div class=\"tooltip-date\"></div>
+                    <div class=\"tooltip-content\"></div>
                 </div>
                 
                 <script>
@@ -523,12 +549,12 @@ jobs:
                             
                             if (hasActivity) {
                                 tooltip.querySelector('.tooltip-content').innerHTML = 
-                                    \`<strong>Platform:</strong> \${platform}<br>
-                                    <strong>Problem:</strong> \${message.split(' ').slice(2).join(' ')}<br>
-                                    <span style="color: #39d353;">✅ Problem solved!</span>\`;
+                                    \\\`<strong>Platform:</strong> \\\${platform}<br>
+                                     <strong>Problem:</strong> \\\${message.split(' ').slice(2).join(' ')}<br>
+                                     <span style=\"color: #39d353;\">✅ Problem solved!</span>\\\`;
                             } else {
                                 tooltip.querySelector('.tooltip-content').innerHTML = 
-                                    '<span style="color: #7d8590;">No activity this day</span>';
+                                    '<span style=\"color: #7d8590;\">No activity this day</span>';
                             }
                             
                             tooltip.style.left = rect.left + window.scrollX + 'px';
@@ -546,10 +572,10 @@ jobs:
                     new Chart(ctx, {
                         type: 'line',
                         data: {
-                            labels: ${JSON.stringify(chartMonths)},
+                            labels: \${JSON.stringify(chartMonths)},
                             datasets: [{
                                 label: 'Problems Solved',
-                                data: ${JSON.stringify(chartValues)},
+                                data: \${JSON.stringify(chartValues)},
                                 borderColor: '#39d353',
                                 backgroundColor: 'rgba(57, 211, 83, 0.1)',
                                 borderWidth: 3,
@@ -625,8 +651,8 @@ jobs:
                     setInterval(createSparkle, 3000);
                 </script>
             </body>
-            </html>`;
-
+            </html>\`;
+            
             fs.writeFileSync('.github/tracker/index.html', html);
             console.log('✨ Enhanced HTML tracker generated!');
           "
