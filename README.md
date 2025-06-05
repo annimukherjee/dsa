@@ -115,6 +115,9 @@ I hope that this *public contract* will keep me accountable and help me stay con
 37. https://leetcode.com/problems/sum-multiples/description/
     1.  Variant of FizzBuzz. First check if a number is divisible by 3, 5 or 7. If it is, add it to the sum. Then check if its divisible by both (3 and 5) or (3 and 7 [i didn't do this]) or (5 and 7). If it is, add it to the sum. Then check if its divisible each of the three. If it is, add it to the sum.
     2.  Prevents overcounting i.e. Whereby you'd count a number twice if it's divisible by both 3 and 5.
+38. https://leetcode.com/problems/find-closest-person/description/
+    1.  Really simple problem. 3 people. X, Y and Z. X and Y move towards Z at the same speed. It is our job to find out who will reach Z first. This can be simply solved by taking the difference.
+
 
 
 ### CodeForces:
