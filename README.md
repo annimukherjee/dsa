@@ -53,6 +53,8 @@ I hope that this *public contract* will keep me accountable and help me stay con
 28. https://www.hackerrank.com/challenges/compare-the-triplets/problem?isFullScreen=true
     1.  Use `zip` which iterates over tuples.
     2.  Basic `if`, `elif` and `else` logic.
+29. https://www.hackerrank.com/challenges/bash-tutorials---a-personalized-echo/problem
+    1.  To get input in `bash` use the read command. Nice [Bash Tutorial for beginners here](https://www.panix.com/~elflord/unix/bash-tute.html).
 
 
 ### Leetcode:
