@@ -55,6 +55,8 @@ I hope that this *public contract* will keep me accountable and help me stay con
     2.  Basic `if`, `elif` and `else` logic.
 29. https://www.hackerrank.com/challenges/bash-tutorials---a-personalized-echo/problem
     1.  To get input in `bash` use the read command. Nice [Bash Tutorial for beginners here](https://www.panix.com/~elflord/unix/bash-tute.html).
+30. https://www.hackerrank.com/challenges/text-processing-cut-1/problem
+    1.  `cut -b <num>` gets the `<num>` byte from a string.
 
 
 ### Leetcode:
