@@ -3,19 +3,19 @@
     {
       "date": "2025-05-26",
       "platform": "LeetCode",
-      "message": "2025-01-15 LeetCode Test Automatic Deployment",
+      "slug": "Test Automatic Deployment",
       "timestamp": "2025-05-25T20:11:49.615Z"
     },
     {
       "date": "2025-06-02",
       "platform": "LeetCode",
-      "message": "2025-06-02 LeetCode First Uniq Character In String",
+      "slug": "First Uniq Character In String",
       "timestamp": "2025-06-02T03:59:30.469Z"
     },
     {
       "date": "2025-06-05",
       "platform": "LeetCode",
-      "message": "2025-06-05 LeetCode Find Closest Person",
+      "slug": "Find Closest Person",
       "timestamp": "2025-06-05T16:47:33.693Z"
     },
     {
