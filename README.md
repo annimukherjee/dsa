@@ -117,6 +117,8 @@ I hope that this *public contract* will keep me accountable and help me stay con
     2.  Prevents overcounting i.e. Whereby you'd count a number twice if it's divisible by both 3 and 5.
 38. https://leetcode.com/problems/find-closest-person/description/
     1.  Really simple problem. 3 people. X, Y and Z. X and Y move towards Z at the same speed. It is our job to find out who will reach Z first. This can be simply solved by taking the difference.
+39. https://leetcode.com/problems/maximum-number-of-words-found-in-sentences/description/
+    1.  Loop over each sentence in the list sentences. use `.split()` to get all the words and `len()` to get the number of words and then do a simple max_words `if` statement. Really easy problem.
 
 
 
