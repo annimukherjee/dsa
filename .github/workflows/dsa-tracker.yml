@@ -1,3 +1,4 @@
+# .github/workflows/dsa-tracker.yml
 name: DSA Problem Tracker
 
 on:
@@ -10,89 +11,108 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # 1 – checkout
-    - uses: actions/checkout@v4
+    # 1 — Checkout repository
+    - name: Checkout repository
+      uses: actions/checkout@v4
       with:
         fetch-depth: 0
         token: ${{ secrets.GITHUB_TOKEN }}
 
-    # 2 – Node
-    - uses: actions/setup-node@v4
+    # 2 — Setup Node.js
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
       with:
-        node-version: 18
+        node-version: '18'
 
-    # 3 – parse commit + update JSON + build site
+    # 3 — Parse commit, update JSON, build HTML
     - name: Update tracker & build site
       env:
         TZ: UTC
       run: |
         set -e
 
-        # --- extract commit info -------------------------------------------------
+        # ---------------------------------------------------------------------
+        # Grab the latest commit message
+        # ---------------------------------------------------------------------
         COMMIT_MSG=$(git log -1 --pretty=%s)
+
+        # Regex that defines a “DSA commit”
+        DSA_REGEX='^[0-9]{4}-[0-9]{2}-[0-9]{2}[[:space:]]+(LeetCode|HackerRank|Codeforces|CodeChef|AtCoder)[[:space:]]+.+'
+
+        # If commit doesn’t match, exit cleanly (and let the job succeed)
+        if [[ ! $COMMIT_MSG =~ $DSA_REGEX ]]; then
+          echo "ℹ️  Not a DSA commit – skipping tracker update."
+          exit 0
+        fi
+
+        # ---------------------------------------------------------------------
+        # Safe to parse now (commands below won’t error out)
+        # ---------------------------------------------------------------------
         COMMIT_DATE=$(git log -1 --pretty=%ci | cut -d' ' -f1)
         PLATFORM=$(echo "$COMMIT_MSG" | grep -oE '(LeetCode|HackerRank|Codeforces|CodeChef|AtCoder)')
-        SLUG=$(echo "$COMMIT_MSG" | sed -E 's/^[0-9]{4}-[0-9]{2}-[0-9]{2}[[:space:]]+(LeetCode|HackerRank|Codeforces|CodeChef|AtCoder)[[:space:]]+//')
+        SLUG=$(echo "$COMMIT_MSG" | sed -E \
+          's/^[0-9]{4}-[0-9]{2}-[0-9]{2}[[:space:]]+(LeetCode|HackerRank|Codeforces|CodeChef|AtCoder)[[:space:]]+//')
+
+        # Export for Node process.env
+        export COMMIT_DATE PLATFORM SLUG
 
         echo "Commit  : $COMMIT_MSG"
         echo "Platform: $PLATFORM"
         echo "Slug    : $SLUG"
 
-        # --- guard - pattern -----------------------------------------------------
-        if [[ ! $COMMIT_MSG =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}[[:space:]]+(LeetCode|HackerRank|Codeforces|CodeChef|AtCoder)[[:space:]]+.+ ]]; then
-          echo "Not a DSA commit – exiting."
-          exit 0
-        fi
-
-        # --- ensure tracker folder ----------------------------------------------
+        # ---------------------------------------------------------------------
+        # Ensure tracker folder & data file exist
+        # ---------------------------------------------------------------------
         mkdir -p .github/tracker
         [[ -f .github/tracker/data.json ]] || echo '{"entries":[]}' > .github/tracker/data.json
 
-        # --- node: update JSON + build HTML -------------------------------------
+        # ---------------------------------------------------------------------
+        # Node: update JSON and build index.html
+        # ---------------------------------------------------------------------
         node <<'NODE'
         const fs = require('fs');
         const path = '.github/tracker/data.json';
-        const data = JSON.parse(fs.readFileSync(path,'utf8'));
+        const data = JSON.parse(fs.readFileSync(path, 'utf8'));
 
+        // ---- add / replace entry -------------------------------------------
         const newEntry = {
           date: process.env.COMMIT_DATE,
           platform: process.env.PLATFORM,
-          slug:    process.env.SLUG,
+          slug: process.env.SLUG,
           timestamp: new Date().toISOString()
         };
 
         const idx = data.entries.findIndex(e => e.date === newEntry.date);
         idx >= 0 ? data.entries[idx] = newEntry : data.entries.push(newEntry);
 
-        // sort ascending
-        data.entries.sort((a,b)=> new Date(a.date)-new Date(b.date));
-        fs.writeFileSync(path, JSON.stringify(data,null,2));
+        data.entries.sort((a, b) => new Date(a.date) - new Date(b.date));
+        fs.writeFileSync(path, JSON.stringify(data, null, 2));
 
-        // --- derive streaks -----------------------------------------------------
+        // ---- streak calculations -------------------------------------------
         let best = 0, current = 0;
-        for (let i = data.entries.length-1; i>=0; i--) {
-          if (i===data.entries.length-1 ||
-              (new Date(data.entries[i+1].date)-new Date(data.entries[i].date))/86400000 === 1) {
+        for (let i = data.entries.length - 1; i >= 0; i--) {
+          if (
+            i === data.entries.length - 1 ||
+            (new Date(data.entries[i + 1].date) - new Date(data.entries[i].date)) / 864e5 === 1
+          ) {
             current++;
           } else break;
         }
-        // full scan for best
-        let temp = 1;
-        for (let i = 1; i < data.entries.length; i++){
-          if ((new Date(data.entries[i].date)-new Date(data.entries[i-1].date))/86400000 === 1){
-            temp++;
-          } else { best = Math.max(best,temp); temp = 1; }
+        let tmp = 1;
+        for (let i = 1; i < data.entries.length; i++) {
+          if ((new Date(data.entries[i].date) - new Date(data.entries[i - 1].date)) / 864e5 === 1) {
+            tmp++;
+          } else {
+            best = Math.max(best, tmp);
+            tmp = 1;
+          }
         }
-        best = Math.max(best,temp);
+        best = Math.max(best, tmp);
 
-        // --- build HTML ---------------------------------------------------------
-        const today = new Date();
-        const oneYearAgo = new Date(today.getTime()-365*864e5);
-
-        // inline JSON for client-side rendering
+        // ---- build HTML -----------------------------------------------------
         const scriptData =
-          `<script>window.DSA_DATA=${JSON.stringify(data.entries)};\
-          window.BEST=${best};window.CUR=${current};</script>`;
+          `<script>window.DSA_DATA=${JSON.stringify(data.entries)};` +
+          `window.BEST=${best};window.CUR=${current};</script>`;
 
         const html = `<!DOCTYPE html>
         <html lang="en"><head>
@@ -100,7 +120,7 @@ jobs:
           <meta name="viewport" content="width=device-width,initial-scale=1">
           <title>DSA Tracker</title>
           <link rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/tippy.js@6/dist/tippy.css" />
+                href="https://cdn.jsdelivr.net/npm/tippy.js@6/dist/tippy.css" />
           <style>
             body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
                  background:#0d1117;color:#e6edf3;margin:24px}
@@ -123,71 +143,70 @@ jobs:
             .AtCoder{background:#2da5cb}
           </style>
         </head><body>
-        <h1>🚀 DSA Problem Tracker</h1>
-        <div id="grid" class="grid" style="margin-top:12px"></div>
+          <h1>🚀 DSA Problem Tracker</h1>
+          <div id="grid" class="grid" style="margin-top:12px"></div>
+          <div class="stats" id="stats"></div>
+          ${scriptData}
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2"></script>
+          <script src="https://cdn.jsdelivr.net/npm/tippy.js@6"></script>
+          <script>
+          (() => {
+            const data = window.DSA_DATA;
+            const start = new Date();
+            start.setDate(start.getDate() - ((52 * 7) + start.getDay() + 1));
+            const grid = document.getElementById('grid');
 
-        <div class="stats" id="stats"></div>
-
-        ${scriptData}
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2"></script>
-        <script src="https://cdn.jsdelivr.net/npm/tippy.js@6"></script>
-        <script>
-        (()=>{
-          const data=window.DSA_DATA;
-          const start=new Date();start.setDate(start.getDate()-((52*7)+start.getDay()+1));
-          const grid=document.getElementById('grid');
-
-          // build columns (weeks)
-          for(let w=0;w<53;w++){
-            const col=document.createElement('div');col.className='col';
-            for(let d=0;d<7;d++){
-              const cell=document.createElement('div');
-              const day=new Date(start.getTime()+((w*7)+d)*864e5);
-              const iso=day.toISOString().slice(0,10);
-              const entry=data.find(e=>e.date===iso);
-              const level=entry?1:0; // simple 0/1 for now
-              cell.className='day';
-              cell.dataset.level=level;
-              if(entry){
-                cell.dataset.tippyContent=\`\${entry.date}: \${entry.slug}\`;
+            for (let w = 0; w < 53; w++) {
+              const col = document.createElement('div');
+              col.className = 'col';
+              for (let d = 0; d < 7; d++) {
+                const cell = document.createElement('div');
+                const day = new Date(start.getTime() + ((w * 7) + d) * 864e5);
+                const iso = day.toISOString().slice(0, 10);
+                const entry = data.find(e => e.date === iso);
+                cell.className = 'day';
+                cell.dataset.level = entry ? 1 : 0;
+                if (entry) {
+                  cell.dataset.tippyContent = \`\${entry.date}: \${entry.slug}\`;
+                }
+                col.appendChild(cell);
               }
-              col.appendChild(cell);
+              grid.appendChild(col);
             }
-            grid.appendChild(col);
-          }
-          tippy('[data-tippy-content]',{theme:'light',arrow:false,duration:[150,100]});
+            tippy('[data-tippy-content]', { theme: 'light', arrow: false, duration: [150, 100] });
 
-          // stats
-          const total=data.length;
-          const last30=data.filter(e=>(new Date()-new Date(e.date))<30*864e5).length;
-          const platforms=data.reduce((m,e)=>(m[e.platform]=(m[e.platform]||0)+1,m),{});
-          const stats=document.getElementById('stats');
-          stats.innerHTML=
-            \`<p><strong>Total:</strong> \${total} problems</p>
-             <p><strong>Last 30 days:</strong> \${last30}</p>
-             <p><strong>Current streak:</strong> \${window.CUR} 🔥 &nbsp;
-                <strong>Best streak:</strong> \${window.BEST}</p>\` +
-            Object.entries(platforms).map(([p,c])=>
-              \`<span class="badge \${p}">\${p}: \${c}</span>\`).join('');
-        })();
-        </script>
-        <div style="margin-top:24px;font-size:12px;color:#7d8590">
-          Last updated: ${new Date().toISOString()}
-        </div>
+            const total = data.length;
+            const last30 = data.filter(e => (new Date() - new Date(e.date)) < 30 * 864e5).length;
+            const platforms = data.reduce((m, e) => (m[e.platform] = (m[e.platform] || 0) + 1, m), {});
+            document.getElementById('stats').innerHTML =
+              \`<p><strong>Total:</strong> \${total} problems</p>
+               <p><strong>Last 30 days:</strong> \${last30}</p>
+               <p><strong>Current streak:</strong> \${window.CUR} 🔥 &nbsp;
+                  <strong>Best streak:</strong> \${window.BEST}</p>\` +
+              Object.entries(platforms).map(([p, c]) =>
+                \`<span class="badge \${p}">\${p}: \${c}</span>\`).join('');
+          })();
+          </script>
+          <div style="margin-top:24px;font-size:12px;color:#7d8590">
+            Last updated: ${new Date().toISOString()}
+          </div>
         </body></html>`;
-        fs.writeFileSync('.github/tracker/index.html',html);
+
+        fs.writeFileSync('.github/tracker/index.html', html);
         console.log('✅ index.html built');
         NODE
 
-    # 4 – commit / push if anything changed
-    - name: Commit tracker
+    # 4 — Commit & push if anything changed
+    - name: Commit tracker updates
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name  "DSA Tracker Bot"
+
         if [[ -n $(git status --porcelain .github/tracker/) ]]; then
           git add .github/tracker/
           git commit -m "📊 Update DSA tracker [skip ci]"
           git push
+          echo "✅ Tracker updated and pushed!"
         else
-          echo "No changes to commit."
+          echo "ℹ️  No changes to commit"
         fi
