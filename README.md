@@ -125,6 +125,16 @@ I hope that this *public contract* will keep me accountable and help me stay con
     1.  Really simple problem. 3 people. X, Y and Z. X and Y move towards Z at the same speed. It is our job to find out who will reach Z first. This can be simply solved by taking the difference.
 39. https://leetcode.com/problems/maximum-number-of-words-found-in-sentences/description/
     1.  Loop over each sentence in the list sentences. use `.split()` to get all the words and `len()` to get the number of words and then do a simple max_words `if` statement. Really easy problem.
+    
+40. [STRING] https://leetcode.com/problems/student-attendance-record-i/description/
+    1.  Loop over the string. 
+        1.  First count the number of `A`s using a dictionary. If this count is ever `>=2` directly return `False` within the loop itself. 
+        2.  Now we need to find a way to track if the string has 3 or more consecutive `L`. To do this, I use a variable called `late_consec`. Whenever the loop encounters a `L` this is incremented by 1. However, if the loop encounters a different letter i.e. a `P` or a `A`, then `late_consec` is reset to zero. This ensures that the only way `late_consec` can be more than 3 is if the loop encounters 3 or more `L`s consecutively thereby making it impossible for the counter to be rest by any other the other if conditions.
+        3. Within the if condition for the character `L` check if the counter is `>=3` or not. If it is, then return `False` immediately, else keep on going.
+
+I've solved 40 problems (atleast) that's how many I've recorded in this repository. I will now transition to doing more structured practice. So I asked `o3` to give me a plan and it gave me this link: https://dev.to/dfs_with_memo/leetcode-warmup-problems-13o7. I will now use this list and try to solve problems using it. I will also try to tag my problems from now on.
+
+
 
 
 
