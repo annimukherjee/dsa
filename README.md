@@ -57,6 +57,8 @@ I hope that this *public contract* will keep me accountable and help me stay con
     1.  To get input in `bash` use the read command. Nice [Bash Tutorial for beginners here](https://www.panix.com/~elflord/unix/bash-tute.html).
 30. https://www.hackerrank.com/challenges/text-processing-cut-1/problem
     1.  `cut -b <num>` gets the `<num>` byte from a string.
+31. https://www.hackerrank.com/challenges/find-second-maximum-number-in-a-list/problem?isFullScreen=true
+    1.  Sort the list, record the highest score. Keep on looping through the list from the end and check if the current value is equal to the highest score or not, if it is then that score is not the runner up. So continue. Else the current value is not equal to the highest score, then it must be the runner up as the list has already been sorted with the `.sort()` command which sorts a list in place in Python.
 
 
 ### Leetcode:
