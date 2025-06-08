@@ -134,6 +134,12 @@ I hope that this *public contract* will keep me accountable and help me stay con
 
 I've solved 40 problems (atleast) that's how many I've recorded in this repository. I will now transition to doing more structured practice. So I asked `o3` to give me a plan and it gave me this link: https://dev.to/dfs_with_memo/leetcode-warmup-problems-13o7. I will now use this list and try to solve problems using it. I will also try to tag my problems from now on.
 
+41. [LINKED LIST] https://leetcode.com/problems/middle-of-the-linked-list/
+    1.  First get the length of the Linked List.
+    2.  Then calculate the middle index based on whether the length of the list is positive or negative.
+    3.  Then, traverse through the LL and keep a track of the number of the nodes you're visiting. The moment you hit the middle node (based on the index that was calculated earlier) save the reference of that node and break the loop.
+    4.  Return this reference. ([code](./leetcode-problems/lc_876_Middle_Of_LL.py))
+
 
 
 
