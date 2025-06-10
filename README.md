@@ -139,6 +139,11 @@ I've solved 40 problems (atleast) that's how many I've recorded in this reposito
     2.  Then calculate the middle index based on whether the length of the list is positive or negative.
     3.  Then, traverse through the LL and keep a track of the number of the nodes you're visiting. The moment you hit the middle node (based on the index that was calculated earlier) save the reference of that node and break the loop.
     4.  Return this reference. ([code](./leetcode-problems/lc_876_Middle_Of_LL.py))
+42. [ARRAY] https://leetcode.com/problems/longest-continuous-increasing-subsequence/description/
+    1.  Longest Continuous Increasing Sub Sequence
+    2.  For each element of the array, I go forward as long as the previous element (prev) is lesser than the next one. If it isn't then, I append the length of the increasing sequence to a list.
+    3.  Sometimes, the list is already sorted in ascending order, so prev is never more than the next. And hence, no value is appended to my list. That's why, I use a flag variable to check if a length was ever appended to my list. If it wasn't then when I come out of the `j` or nested loop, I append the length anyways. Each time the length is reset.
+    4.  This is O(n^2) and pretty slow, but it gets the job done!
 
 
 
