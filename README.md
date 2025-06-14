@@ -144,6 +144,11 @@ I've solved 40 problems (atleast) that's how many I've recorded in this reposito
     2.  For each element of the array, I go forward as long as the previous element (prev) is lesser than the next one. If it isn't then, I append the length of the increasing sequence to a list.
     3.  Sometimes, the list is already sorted in ascending order, so prev is never more than the next. And hence, no value is appended to my list. That's why, I use a flag variable to check if a length was ever appended to my list. If it wasn't then when I come out of the `j` or nested loop, I append the length anyways. Each time the length is reset.
     4.  This is O(n^2) and pretty slow, but it gets the job done!
+43. [STRINGS] https://leetcode.com/problems/find-the-difference/?envType=study-plan-v2&envId=programming-skills
+    1.  two strings, `s` and `t`. `t` has one extra character that `s` does not have.
+    2.  Goal: Print out this extra character.
+    3.  Solution: Loop through `t`. Check if that character exists in `s`. If it does, remove it from `s`. The first character you find that does not exists in s, is your correct answer.
+        1.  Note: removal from s is important due to the case of `s='a'` and `t='aa'`
 
 
 
