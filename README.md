@@ -190,7 +190,7 @@ Starting to maintain a table from now on.
 | SNo | Date | Name of Problem | Platform | Description for how I solved it | What I learnt | Code |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1 | 2025-06-18 (18th June 2025) | Find the Index of the First Occurrence in a String | Leetcode #28 | I slid a window across the haystack. I check character wise if the needle is equal to the haystack or not. If it is, I continue to increment a counter. The moment the counter == length of the needle that means I’ve found len(needle) number of characters in the haystack that exactly equal the characters in the haystack. To calculate the first index, I reasoned, I am starting from some index i of the haystack and I checking in front of index i by len(needle). So to get the first index, it is natural to subtract i+j (the last index where I got the total equality from len(needle)-1. | How do do this sliding window thing | [Link](./leetcode-problems/lc_28_idx_first_occuring_string.py) |
-|  |  |  |  |  |  |  |
+| 2 | 2025-06-19 (19th June 2025) | Minimum Number Game | Leetcode #2974 | Really simple problem. Until the given array is empty, let alice remove the min element from the list and then let bob remove the next min element etc. and append bob’s min element to the new list `arr` and then append alice’s min element to the aforementioned array `arr`. | How to loop over a list and do “append” | [Link](./leetcode-problems/lc_2974_min_num_game.py) |
 |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |
