@@ -149,12 +149,21 @@ I've solved 40 problems (atleast) that's how many I've recorded in this reposito
     2.  Goal: Print out this extra character.
     3.  Solution: Loop through `t`. Check if that character exists in `s`. If it does, remove it from `s`. The first character you find that does not exists in s, is your correct answer.
         1.  Note: removal from s is important due to the case of `s='a'` and `t='aa'`
-44. [ARRAY] https://leetcode.com/problems/contains-duplicate/description/
+    
+### LeetCode (Neetcode.io):
+
+1. [ARRAY] https://leetcode.com/problems/contains-duplicate/description/
     1.  This is the first problem on [Neetcode's roadmap](https://neetcode.io/roadmap).
     2. Return `True` if the Array has duplicate elements, else return `False`.
     3. Initially I tried to keep a list called `app`. As I iterated through the array I checked if that particular element was already in `app` or not. If it was already present in `app` I returned `True` as that meant I'd seen the number before and the array did indeed contain duplicate elements. If the number wasn't present in `app` I appended it to `app` and continued with life.
     4. However doing the above led to a `Timeout` error. So I asked GPT to guide me to the right solution using the [Socratic Method](https://en.wikipedia.org/wiki/Socratic_method) and it asked me to find a more efficient data structure for the `app` list which is a Set. So I changed `app = []` to `app = set()` and found that I solved the problem!
     5. Solution [here](leetcode-problems/lc_217_contains_duplicates.py)
+    6. NeetCode's solution: [YouTube](https://www.youtube.com/watch?v=3OamzN90kPg&ab_channel=NeetCode), [Text](https://neetcode.io/solutions/contains-duplicate)
+ 2. [ARRAY] https://leetcode.com/problems/valid-anagram/
+    1. Given two strings `s` and `t` check if they are [anagrams](https://en.wikipedia.org/wiki/Anagram).
+    2. I created a list of all the letters in `t`.
+    3. For each character of `s` if it was present in `t_chars` I removed that from the `t_chars` list.
+    4. At the end of the loop, if `len(t_chars)==0` I returned `True`, else I returned `False`.
 
 
 
