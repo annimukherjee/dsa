@@ -179,7 +179,11 @@ I know I'm flipping and flopping too much, but a friend of mine recently sent th
    2. This is a simple problem, for each character in `jewels` run a loop through the entire `stones` string. If a character in `stones` matches the character in `jewels`, increment the `total_jewels` counter by one.
    3. Solution [here](./leetcode-problems/lc_771_jewels_stones.py).
 
-
+2. [ARRAY] LeetCode 1365: How Many Numbers Are Smaller Than the Current Number (https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/description/)
+   1. Given an array of numbers, output an array of the same length such that the `ith` position of the output array is a count of the number of numbers present in the input array that are strictly smaller than `input_arr[i]`.
+   2. Logic:
+      1. For each number in the array, iterate over the entire array. Check if `curr_num` > `each_element_in_the_array` and increment a counter if so. Append this counter to an empty list.
+   3. Solution [here](./leetcode-problems/lc_1365_nums_smaller_than_current_num.py)
 
 
 
