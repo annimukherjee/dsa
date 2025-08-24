@@ -149,7 +149,8 @@ I've solved 40 problems (atleast) that's how many I've recorded in this reposito
     2.  Goal: Print out this extra character.
     3.  Solution: Loop through `t`. Check if that character exists in `s`. If it does, remove it from `s`. The first character you find that does not exists in s, is your correct answer.
         1.  Note: removal from s is important due to the case of `s='a'` and `t='aa'`
-    
+
+
 ### LeetCode (Neetcode.io):
 
 1. [ARRAY] https://leetcode.com/problems/contains-duplicate/description/
