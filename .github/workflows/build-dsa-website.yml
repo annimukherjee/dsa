@@ -1,0 +1,62 @@
+name: Build and Deploy DSA Progress Website
+
+on:
+  push:
+    branches:
+      - main # Or whichever branch you push your solutions to
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          # We need to fetch all history to calculate streaks
+          fetch-depth: 0
+
+      - name: Parse Commit Message and Update Data
+        run: |
+          # Get the latest commit message
+          COMMIT_MSG=$(git log -1 --pretty=%B)
+
+          # Regex to parse your specific commit message format
+          REGEX="^([0-9]{4}-[0-9]{2}-[0-9]{2}) (LeetCode|HackerRank|Codeforces) (.+) Diff_(Easy|Medium|Hard)$"
+
+          if [[ $COMMIT_MSG =~ $REGEX ]]; then
+            DATE=${BASH_REMATCH[1]}
+            PLATFORM=${BASH_REMATCH[2]}
+            PROBLEM_NAME=${BASH_REMATCH[3]}
+            DIFFICULTY=${BASH_REMATCH[4]}
+
+            # Create a JSON object with the extracted data
+            JSON_ENTRY="{\"date\": \"$DATE\", \"platform\": \"$PLATFORM\", \"problem_name\": \"$PROBLEM_NAME\", \"difficulty\": \"$DIFFICULTY\"}"
+
+            # Append the new entry to a JSON file (or create it if it doesn't exist)
+            # We use jq to handle JSON formatting correctly
+            if [ ! -f _data/problems.json ]; then
+              echo "[]" > _data/problems.json
+            fi
+            jq ". += [$JSON_ENTRY]" _data/problems.json > _data/problems.tmp && mv _data/problems.tmp _data/problems.json
+          else
+            echo "Commit message does not match the expected format. Skipping data update."
+          fi
+
+      - name: Setup Ruby and Jekyll
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0' # Or a version compatible with your Jekyll setup
+
+      - name: Install Jekyll and Dependencies
+        run: |
+          gem install bundler
+          bundle install
+
+      - name: Build the Website with Jekyll
+        run: bundle exec jekyll build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site

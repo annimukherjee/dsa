@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<h1>My DSA Progress</h1>
+
+<h2>Solved Problems</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Platform</th>
+      <th>Problem</th>
+      <th>Difficulty</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for problem in site.data.problems reversed %}
+      <tr>
+        <td>{{ problem.date }}</td>
+        <td>{{ problem.platform }}</td>
+        <td>{{ problem.problem_name }}</td>
+        <td>{{ problem.difficulty }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
