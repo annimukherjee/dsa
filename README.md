@@ -170,6 +170,21 @@ I've solved 40 problems (atleast) that's how many I've recorded in this reposito
 
 
 
+### DSAGUIDE.pdf
+
+I know I'm flipping and flopping too much, but a friend of mine recently sent this [DSAGUIDE.PDF](./plans/dsaguide.pdf) to me and it's a really well written document that teaches the reader the fundamentals of Data Structures and Algorithms. I like the PDF and hence I'll be using it in my journey from now on.
+
+1. [ARRAY] LeetCoode 771: Jewels and Stones (https://leetcode.com/problems/jewels-and-stones/description/)
+   1. So you have two strings, `jewels` and `stones`. You have to output the number of jewels in the stones string. Each character in the `jewels` string is a different type of jewel. And each character in the `stones` string is a type of stone. Now some stones may be jewels while others aren't jewels.
+   2. This is a simple problem, for each character in `jewels` run a loop through the entire `stones` string. If a character in `stones` matches the character in `jewels`, increment the `total_jewels` counter by one.
+   3. Solution [here](./leetcode-problems/lc_771_jewels_stones.py).
+
+
+
+
+
+
+
 ### CodeForces:
 1. https://codeforces.com/problemset/problem/4/A [Watermelon] (15 Apr 2025)
    1. Essentially check if a number is even and greater than 2 so that it can be split into two even numbers. 
